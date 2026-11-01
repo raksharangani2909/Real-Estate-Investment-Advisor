@@ -1,0 +1,31 @@
+train=200,000 test=50,000 | good-investment share=0.311
+2026/11/01 17:37:02 INFO mlflow.store.db.utils: Creating initial MLflow database tables...
+2026/11/01 17:37:02 INFO mlflow.store.db.utils: Updating database tables
+2026/11/01 17:37:06 WARNING mlflow.sklearn: Saving scikit-learn models in the pickle or cloudpickle format requires exercising caution because these formats rely on Python's object serialization mechanism, which can execute arbitrary code during deserialization. The recommended safe alternative is the 'skops' format. For more information, see: https://scikit-learn.org/stable/model_persistence.html
+[clf] LogisticRegression acc=0.9198 f1=0.8698 auc=0.9768 (2s)
+2026/11/01 17:38:14 WARNING mlflow.sklearn: Saving scikit-learn models in the pickle or cloudpickle format requires exercising caution because these formats rely on Python's object serialization mechanism, which can execute arbitrary code during deserialization. The recommended safe alternative is the 'skops' format. For more information, see: https://scikit-learn.org/stable/model_persistence.html
+[clf] RandomForest       acc=0.9860 f1=0.9774 auc=0.9992 (62s)
+2026/11/01 17:38:32 WARNING mlflow.sklearn: Saving scikit-learn models in the pickle or cloudpickle format requires exercising caution because these formats rely on Python's object serialization mechanism, which can execute arbitrary code during deserialization. The recommended safe alternative is the 'skops' format. For more information, see: https://scikit-learn.org/stable/model_persistence.html
+[clf] XGBoost            acc=0.9964 f1=0.9942 auc=0.9999 (13s)
+2026/11/01 17:38:35 WARNING mlflow.sklearn: Saving scikit-learn models in the pickle or cloudpickle format requires exercising caution because these formats rely on Python's object serialization mechanism, which can execute arbitrary code during deserialization. The recommended safe alternative is the 'skops' format. For more information, see: https://scikit-learn.org/stable/model_persistence.html
+Successfully registered model 'real_estate_investment_classifier'.
+Created version '1' of model 'real_estate_investment_classifier'.
+2026/11/01 17:38:40 WARNING mlflow.sklearn: Saving scikit-learn models in the pickle or cloudpickle format requires exercising caution because these formats rely on Python's object serialization mechanism, which can execute arbitrary code during deserialization. The recommended safe alternative is the 'skops' format. For more information, see: https://scikit-learn.org/stable/model_persistence.html
+[reg] Ridge              rmse=12.787 mae=9.695 r2=0.9961 (1s)
+2026/11/01 17:39:49 WARNING mlflow.sklearn: Saving scikit-learn models in the pickle or cloudpickle format requires exercising caution because these formats rely on Python's object serialization mechanism, which can execute arbitrary code during deserialization. The recommended safe alternative is the 'skops' format. For more information, see: https://scikit-learn.org/stable/model_persistence.html
+[reg] RandomForest       rmse=6.378 mae=4.673 r2=0.9990 (64s)
+2026/11/01 17:40:07 WARNING mlflow.sklearn: Saving scikit-learn models in the pickle or cloudpickle format requires exercising caution because these formats rely on Python's object serialization mechanism, which can execute arbitrary code during deserialization. The recommended safe alternative is the 'skops' format. For more information, see: https://scikit-learn.org/stable/model_persistence.html
+[reg] XGBoost            rmse=1.782 mae=1.317 r2=0.9999 (13s)
+2026/11/01 17:40:11 WARNING mlflow.sklearn: Saving scikit-learn models in the pickle or cloudpickle format requires exercising caution because these formats rely on Python's object serialization mechanism, which can execute arbitrary code during deserialization. The recommended safe alternative is the 'skops' format. For more information, see: https://scikit-learn.org/stable/model_persistence.html
+Successfully registered model 'real_estate_price_forecaster'.
+Created version '1' of model 'real_estate_price_forecaster'.
+
+Best classifier: XGBoost | Best regressor: XGBoost | total 197s
+             model  accuracy  precision  recall     f1  roc_auc  train_seconds  baseline_majority_accuracy
+           XGBoost    0.9964     0.9943  0.9941 0.9942   0.9999        12.7649                      0.6891
+      RandomForest    0.9860     0.9782  0.9766 0.9774   0.9992        62.0428                      0.6891
+LogisticRegression    0.9198     0.8773  0.8625 0.8698   0.9768         1.8968                      0.6891
+       model    rmse    mae     r2  mape_pct  train_seconds  baseline_naive_rmse
+     XGBoost  1.7824 1.3172 0.9999    0.5322        12.9063             138.5794
+RandomForest  6.3779 4.6728 0.9990    1.4062        63.9935             138.5794
+       Ridge 12.7868 9.6946 0.9961    6.3021         0.7561             138.5794
