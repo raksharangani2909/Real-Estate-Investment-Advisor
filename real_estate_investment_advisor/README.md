@@ -36,6 +36,7 @@ real_estate_investment_advisor/
 pip install -r requirements.txt
 # Everything is already generated, so you can launch the app straight away:
 streamlit run app/streamlit_app.py
+to see the working of app click on this link :http://localhost:8502/
 
 # To regenerate everything from the raw CSV (~5 min):
 bash run_all.sh                                       # or run the 3 scripts in src/ one by one
